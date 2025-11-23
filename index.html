@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="auth.js"></script>
+   
+
+</head>
+<body>
+  
+
+    <div class="container">
+
+        <!-- Profile Section -->
+       <div class="cover-container">
+    <img src="images/cover.jpg" alt="Cover Photo" class="cover-photo">
+</div>
+
+        <h1 class="title">HI I'M <span class="highlight">Yzabelle!</span></h1>
+        <p class="subtitle">First Year Student • Creator</p>
+
+
+
+<div id="about" class="section-box">
+    <h2>About Me</h2>
+    <ul>
+        <li>Im 19 Years Old</li>
+        <li>Studying in Caraga States University - Cabadbaran Campus</li>
+        <li>Taking Bachelor of Science Information technology</li>
+        <li>I live in Tolosa, Cabadbaran City</li>
+        
+    </ul>
+</div>
+
+<div id="Education" class="section-box">
+    <h2>Education</h2>
+    <ul>
+        <li>Northern Mindanao Colleges, Inc – Deen</li>
+        <li>Northern Mindanao Colleges, Inc – Deen</li>
+        <li>Northern Mindanao Colleges, Inc – Main</li>
+    </ul>
+</div>
+
+
+
+<div id="Hobbies" class="section-box">
+    <h2>Hobbies</h2>
+    <ul>
+        <li>I like to sing</li>
+        <li>Read online books</li>
+        <li>Do tiktok videos</li>
+    </ul>
+</div>
+
+<div id="Favorites" class="section-box">
+    <h2>Favorites</h2>
+
+    <div class="fav-item" onclick="toggleFav('colorFav')">
+        <span>Color</span>
+        <span class="arrow">▼</span>
+    </div>
+    <div id="colorFav" class="fav-content">
+        Blue
+    </div>
+
+    <div class="fav-item" onclick="toggleFav('drinkFav')">
+        <span>Drink</span>
+        <span class="arrow">▼</span>
+    </div>
+    <div id="drinkFav" class="fav-content">
+        Iced Coffee
+       <p>Milk Tea</p> 
+       <p>Fruit Soda</p>
+    </div>
+
+    <div class="fav-item" onclick="toggleFav('foodFav')">
+        <span>Food</span>
+        <span class="arrow">▼</span>
+    </div>
+    <div id="foodFav" class="fav-content">
+        <p>Buttered Shrimp</p>
+        <p>Chicken Wings</p>
+        <p>Pork Adobo</p>
+    </div>
+
+    <div class="fav-item" onclick="toggleFav('snackFav')">
+        <span>Snack</span>
+        <span class="arrow">▼</span>
+    </div>
+    <div id="snackFav" class="fav-content">
+        <p>Mango</p>
+        <p>Street Foods</p>
+        <p>Sweet Corn</p>
+        <p>Buldak Carbonara</p>
+    </div>
+</div>
+
+
+<div id="contact" class="section-box">
+    <h2>Contact</h2>
+    <p>Email: watkinsyzabelle@gmail.com</p>
+    <p>Phone: 09762971198</p>
+    <p>Facebook: https://www.facebook.com/share/1BookahMD6/ </p>
+</div>
+
+
+       
+
+
+        <button id="signOutBtn" class="signout-btn">Sign Out</button>
+
+    </div>
+
+<script>
+function toggleSection(id) {
+    const content = document.getElementById(id);
+    content.style.display = content.style.display === "block" ? "none" : "block";
+}
+</script>
+<script>
+function toggleFav(id) {
+    const content = document.getElementById(id);
+    const item = content.previousElementSibling;
+
+    // Toggle open state
+    item.classList.toggle("open");
+
+    // Show / hide content
+    if (content.style.display === "block") {
+        content.style.display = "none";
+    } else {
+        content.style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>
