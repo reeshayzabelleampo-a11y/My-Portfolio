@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    
+</head>
+<body>
+
+<h2>Create Account</h2>
+
+<input type="text" id="regUser" placeholder="Create Username"><br><br>
+<input type="password" id="regPass" placeholder="Create Password"><br><br>
+
+<button id="registerBtn">Register</button>
+
+<p id="regMsg"></p>
+
+<script>
+document.getElementById("registerBtn").addEventListener("click", function() {
+    let username = document.getElementById("regUser").value;
+    let password = document.getElementById("regPass").value;
+
+    if(username === "" || password === "") {
+        document.getElementById("regMsg").innerHTML = "Please fill all fields.";
+        return;
+    }
+
+    // Save to localStorage
+    localStorage.setItem("savedUser", username);
+    localStorage.setItem("savedPass", password);
+
+    document.getElementById("regMsg").innerHTML = "Account created! You can now sign in.";
+});
+</script>
+
+</body>
+</html>
